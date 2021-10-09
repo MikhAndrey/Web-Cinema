@@ -152,6 +152,9 @@ line-height: 150%;
     cursor:pointer;
     margin-top:15px;
 }
+option{
+    background-color:#621402;
+}
 .select-cinema{
     min-width:470px;
 }
