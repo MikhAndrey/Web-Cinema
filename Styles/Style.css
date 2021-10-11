@@ -199,6 +199,7 @@ option{
 }
 .legend svg{
     margin-right:15px;
+    margin-left:10px;
 }
 .price{
     padding-top:20px;
@@ -323,6 +324,11 @@ text-decoration: none;
         margin-left:0;
         margin-top:15px;
     }
+    .price-tag{
+        font-size: 32px;
+        line-height: 38px;
+    }
+
 }
 .nav{
     position:relative;
@@ -332,6 +338,7 @@ text-decoration: none;
     visibility:visible;
     transform:translateY(0) ;
 }
+
 @media(max-width:536px){
     .session-time{
         margin-top:40px;
