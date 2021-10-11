@@ -23,6 +23,9 @@ body{
 .menu-item{
 margin-right: 25px;
 }
+.m-menu{
+    display:none;
+}
 .avatar{
     width:33px;
     height:33px;
@@ -44,7 +47,8 @@ margin-right: 25px;
 .header{
  background:linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%),
  url("../img/bg.jpg") no-repeat center top / cover;  
- min-height: 100vh;
+padding-bottom:60px;
+max-width: 100%;
 }
 .film{
     color:white;
@@ -156,7 +160,7 @@ option{
     background: #621402;
 }
 .select-cinema{
-    min-width:470px;
+    width:470px;
 }
 .scheme{
     background: rgba(36, 36, 36, 0.18);
@@ -182,6 +186,8 @@ option{
     margin:auto;
     padding-top:22px;
     padding-bottom:38px;
+    justify-content: flex-start;
+    width:90%;
 }
 .legend-lable{
     display:flex;
@@ -219,4 +225,115 @@ font-size: 18px;
 line-height: 21px;
 padding: 24px 52px;
 text-decoration: none;
+}
+@media (max-width:1200px){
+    .container{
+        max-width: 960px;
+    }
+}
+.select-cinema{
+    width:100%;
+}
+.scheme-svg{
+    max-width: 1170px;
+}
+@media (max-width:992px){
+    .container{
+        max-width: 750px;
+    }
+    .session{
+        flex-wrap: wrap;
+    }
+    .session-date{
+        flex-basis: 70%;
+    }
+    .session-time{
+        order:2;
+    }
+    .session-cinema{
+        order:3;
+        margin-top:40px;
+    }
+    .menu-item{
+        margin-right:20px;
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        max-width:560px;
+    }
+    .legend-lable{
+        margin-right: 10px;
+    }
+    .legend svg{
+        margin-right:5px;
+    }
+    .session-date-item{
+        width:60px;
+        height:60px;
+    }
+    .button-pay{
+        padding-top:12px;
+        padding-bottom:12px;
+        padding-left:26px;
+        padding-right:26px;
+    }
+    .session-day{
+        font-size:20px;
+        line-height: 22px;
+    }
+    .session-month{
+        font-size:14px;
+        line-height:16px;
+        padding-top:2px;
+    }
+    .menu{
+        position:absolute;
+        left:20px;
+        top:40px;
+        padding:20px;
+        margin-left:0;
+        flex-direction: column;
+        background-color:#621402;
+        z-index:9;
+        border-radius: 10px;
+        opacity:0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition:opacity 0.5s, transform 0.5s;
+    }
+    .menu-item:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .m-menu{
+        background-color: transparent;
+        border:none;
+        width:40px;
+        height:40px;
+        margin-left:10px;
+        cursor:pointer;
+        display: block;
+    }
+    .film{
+        flex-direction: column;
+    }
+    .film-trailer{
+        margin-right:auto;
+        margin-left:0;
+        margin-top:15px;
+    }
+}
+.nav{
+    position:relative;
+}
+.is-open{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0) ;
+}
+@media(max-width:536px){
+    .session-time{
+        margin-top:40px;
+    }
 }
